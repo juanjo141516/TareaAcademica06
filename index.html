@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tarea Academica 6</title>
+</head>
+<body>
+    <header>
+        <h1>Listado de productos</h1>
+    </header>
+    <main>
+        <fieldset>
+            <legend>Filtros</legend>
+            <form id="divForm" action="listado" method="POST">
+                <div id="divCategorias">
+                    <label for="selectCategorias">Categorías :</label>
+                    <select name="selectCategorias" id="selectCategorias" ></select>
+                </div>
+                <div id="divNombre">
+                    <label for="textoNombre">Nombre :</label>
+                    <input id="textoNombre" name="textoNombre" placeholder="Nombre" type="text">
+                </div>
+                <div id="divBotones">
+                    <button id="botonBuscar">Buscar</button>
+                    <button id="botonAgregar"> Agregar</button>
+                </div>
+                
+            </form>
+        </fieldset>
+        <br>
+        <br>
+        <table>
+            <tr>
+                <th ><a id="Codigo">Código</a> </th>
+                <th ><a id="Producto">Producto</a> </th>
+                <th ><a id="Categoria">Categoría</a> </th>
+                <th ><a id="Precio">Precio</a> </th>
+                <th ><a id="Proveedor">Proveedor</a> </th>
+                <th ><a id="Proveedor">Acciones</a> </th>
+            </tr>
+            <tbody id="contenidoTabla"></tbody>
+        </table>
+    </main>
+    <script src="index.js" ></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+header h1{
+    text-align: center;
+    background-color: #e9f85d;
+}
+main fieldset {
+    background-color: #204EBD;
+    color: white;
+}
+main legend{
+    background-color: #204EBD;
+}
+main table{
+    width: 90vw;
+}
+main #divForm{
+    display: grid;
+    grid-template-areas: "categorias nombre buscador";
+}
+main #divCategorias{
+    grid-area: categorias;
+    margin: auto 0;
+}
+main #divNombre{
+    grid-area: nombre;
+}
+main #divBotones{
+    grid-area: buscador;
+}
+main form select {
+    width: 150px;
+} 
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: lightblue;
+    color: white;
+}
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+button {
+    padding: 10px;
+    border-radius: 5px;
+    background: #2196F3;
+    color: white;
+    font-size: 15px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    align-items: flex-end;
+}
+#botonAgregar{
+
+    background-color:black;
+}
+
+.boton-eliminar {
+    background: tomato;
+    margin-left: 30px; 
+}
+.boton-modificar{
+    background-color: #4CAF50;
+    margin-left: 30px; 
+    
+}
+#imagenEditar {
+    height: 25px;
+    width: 25px; 
+}
+
+#imagenEliminar{
+    height: 25px;
+    width: 25px; 
+}

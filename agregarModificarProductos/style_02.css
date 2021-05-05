@@ -1,0 +1,334 @@
+
+body{
+    margin: 0;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 11% 11% 77% 6%;
+    grid-template-areas:"header header header header header header"
+                        "main main main nav nav nav"
+                        "aside aside aside aside aside aside"
+                        "footer footer footer footer footer footer";
+}
+
+header{
+    grid-area: header;
+    background-color:blue;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+#titulo_header{
+    grid-column: 2/8;
+    text-align: center;
+    padding: 22px;
+    margin: auto 0 ;
+    font-size: 2.5em;
+}
+header figure{
+    grid-column: 8/9;
+    font-size: 16px;
+    display: inline-flex;
+    margin: initial;
+}
+header img{
+    height: 50px;
+    width: 50px;
+    margin: auto 0;
+    opacity: 60%;
+    clip-path: circle(50% at 50% 50%);
+}
+header figcaption{
+    margin: auto 20px;
+}
+
+nav{
+    grid-area: nav;
+    background-color:#9BAFEB;
+    color:#fff;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+
+}
+#label_buscar{
+    color: white;
+    font-size: 18px;
+    grid-column: 1/3;
+    margin: auto ;
+}
+#input_buscar{
+    width: 100%;
+    margin: auto 0;
+    grid-column: 3/6;
+    border-radius: 20px;
+}
+#boton_buscar{
+    grid-column: 6/7;
+    display: grid;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+#logo_buscador{
+    height: 40px;
+    width: 40px;
+    padding-top: 5px;
+    margin: auto;  
+}
+main{
+    grid-area: main;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: gainsboro;
+    font-size: 16px;
+}
+main ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+#li_inicio{
+    grid-column: 1/2;
+}
+#li_usuarios{
+    grid-column: 2/3;
+}
+#li_clientes{
+    grid-column: 3/4;
+}
+#li_proveedores{
+    grid-column: 4/5;
+}
+#li_productos{
+    grid-column: 5/6;
+    border: none;
+}
+main .li_menu{
+    display: initial;
+    border-right: 1px solid black;
+}
+main figure{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+main img{
+    height: 30px;
+    width: 30px;
+    margin: 15px auto;
+}
+main figcaption{
+    margin: 3px auto;
+
+}
+main a{    
+    text-decoration: none;
+    color: black;
+}
+
+aside{
+    grid-area: aside;
+    background-color: lightblue;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    justify-items: normal;
+}
+#container_fieldset{
+    border: 2px solid black;
+    margin: 25px 18%;
+}
+#container_fieldset legend{
+    text-align: center;
+    font-size: 25px;
+}
+aside fieldset{
+    border: 1px solid black;
+    margin: 6px 5% 21px 5%;
+}
+aside #container_fieldset fieldset legend{
+    text-align: start;
+    font-size: 18px;
+}
+aside .formulario{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin: 20px 0;
+    justify-items: start;
+}
+aside label{
+    grid-column: 1/3;
+    width: 80%;
+    margin: auto 0;
+}
+aside input{
+    height: 18px;
+    grid-column: 3/7;
+    margin: auto 0;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding-left: 5px;    
+}          
+#inputCodigo{
+    grid-column: 3/5;
+    width: 50%;
+}
+#boton_validacion{
+    margin: auto 0;
+    grid-column: 5/7;
+    border-radius: 30px;
+    width: 35%;
+    font-size: 16px;
+}
+#inputNombre{
+    width: 100%;
+    grid-column:3/6 ;
+}
+#inputProveedor{
+    grid-column: 3/5;
+    width: 100%;
+}
+#seccionCategorias{
+    grid-column: 3/5;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 75%;
+}
+#inputRUC{
+    grid-column: 3/5;
+    width: 65%;
+}
+#inputPrecio{
+    grid-column: 3/5;
+    width: 50%;
+}
+#input_color{
+    width: 5%;
+    padding-left: 3px;
+}
+#div_fecha{
+    display: grid;
+    margin: 18px 0;
+    grid-template-columns: repeat(6, 1fr);
+}
+#label_fecha{
+    grid-column: 1/3;
+}
+#inputFecha{
+    grid-column: 3/5;
+    margin: auto 0;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding-left: 5px ;
+    width: 72%;
+    height: 18px;
+}
+#logo_fecha{
+    grid-column: 5/6;
+    height: 30px;
+    width: 30px;
+}
+#div_estado{
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+#label_estado{
+    grid-column: 1/3;
+    margin: auto 0;
+}
+#div_radio_activo{
+    grid-column: 3/4;
+}
+#div_radio_suspendido{
+    grid-column: 4/5;
+}
+#div_radio_de_baja{
+    grid-column: 5/7;
+}
+aside .estados {
+    font-size: 14px;
+}
+#div_impuesto{
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+#label_impuesto{
+    
+    grid-column: 1/3;
+}
+#checkboxImpuesto{
+    
+    grid-column: 3/7;
+    width: 13px;
+    margin: auto 0;
+}
+
+#div_descripcion{
+    margin: 20px 0;
+    display: grid;
+    height: 70%;
+    grid-template-columns: repeat(6, 1fr);
+}
+#label_descripcion{
+    grid-column: 1/3;
+    margin: 50px 0;
+}
+#textareaDescripcion{
+    grid-column: 3/7;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 10px;
+    resize: none;
+}
+
+#div_botones{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 28px 0;
+    justify-items: center;
+}
+aside #div_botones button{
+    color: black;
+    border-radius: 10px;
+    width: 25%;
+    height: 35px;
+    font-size: 16px;
+}
+#botonLimpiar{
+    grid-column: 1/2;
+}
+#botonGuardar{
+    grid-column: 2/3;
+}
+footer{
+        grid-area: footer;
+        background-color: cornflowerblue;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+}
+footer a{
+    margin: auto;
+    border: none;
+    color:black;
+    font-size: 20px;
+    text-decoration: none;
+}  
+
+#que_hacemos{
+    grid-column: 1/2;
+}
+#enlaces_principales{
+    grid-column: 2/3;
+}
+#contactanos{
+    grid-column: 3/4;
+}
+

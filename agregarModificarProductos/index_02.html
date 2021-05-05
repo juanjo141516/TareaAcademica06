@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_02.css">
+    <title>Página web</title>
+</head>
+<body>
+    <header>
+        <h1 id="titulo_header">Sistema integrado de gestión</h1>
+        <figure>
+            <img id="foto_usuario" src="../imagenes/header/usuario.png" alt="Foto de usuario">
+            <figcaption>Usuario</figcaption>
+        </figure>
+    </header>
+    <nav>
+        <label id="label_buscar" for="Buscar">Buscar en la web</label>
+        <input id="input_buscar" type="search">
+        <button id="boton_buscar">                
+            <img id="logo_buscador" src="../imagenes/nav/lens.png" alt="Lupa">
+            Buscar
+        </button>
+    </nav>
+    <main>
+        <ul>
+            <li id="li_inicio" class="li_menu">
+                <figure>
+                    <img src="../imagenes/main/home.png" alt="icono inicio">
+                    <figcaption>
+                        <a href="">Inicio</a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li id="li_usuarios" class="li_menu">
+                <figure>
+                    <img src="../imagenes/main/users.png" alt="icono usuarios">
+                    <figcaption>
+                        <a href="">Usuarios</a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li id="li_clientes" class="li_menu">
+                <figure>
+                    <img src="../imagenes/main/customers.png" alt="icono clientes">
+                    <figcaption>
+                        <a href="">Clientes</a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li id="li_proveedores" class="li_menu">
+                <figure>
+                    <img src="../imagenes/main/vendors.png" alt="icono proveedores">
+                    <figcaption>
+                        <a href="">Proveedores</a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li id="li_productos" class="li_menu">
+                <figure>
+                    <img src="../imagenes/main/products.png" alt="icono productos">
+                    <figcaption>
+                        <a href="">Productos</a>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </main>
+    <aside>
+       <fieldset id="container_fieldset">
+           <legend>LISTADO DE PRODUCTOS</legend>
+            <fieldset>
+                <legend>Agregar productos</legend>
+                <form>
+                    <div class="formulario">
+                        <label for="codigo">Código* :</label>
+                        <input id="inputCodigo" type="tel" pattern="[0-9]{6}" title="Debe ingresar solo 6 números" required>
+                        <button id="boton_validacion">Validar</button>    
+                    </div>
+                
+                    <div class="formulario">
+                        <label for="nombre">Nombre* :</label>
+                        <input id="inputNombre" type="text"placeholder="Solo letras y números" title="Solo letras" required>
+                    </div>
+
+                    <div class="formulario">
+                        <label for="list_categorias">Categorias* :</label>
+                        <select name="selectCategorias" id="seccionCategorias" ></select>
+                    </div>
+
+                    <div class="formulario">
+                        <label for="ruc">RUC Proveedor* :</label>
+                        <input id="inputRUC" type="tel" maxlength="11"pattern="[0-9]{11}" placeholder="Solo números" title="Solo números" required>
+                    </div>
+
+                    <div class="formulario">
+                        <label for="Proveedor">Proveedor :</label>
+                        <input id="inputProveedor" type="text" placeholder="Solo letras" pattern="[a-zA-Z\s\.]{2,100}">
+                    </div>
+
+                    <div class="formulario">
+                        <label for="precio">Precio* :</label>
+                        <input id="inputPrecio" type="number" min="0" step="0.01" max="10000000" pattern="[0-9]" required>
+                    </div>
+
+                    <div id="div_fecha">
+                        <label id="label_fecha" for="fecha">Fecha* :</label>
+                        <input id="inputFecha" type="datetime-local" required>
+                        <img id="logo_fecha" src="../imagenes/aside/date.png" alt="logo de la fecha">
+                    </div>
+
+                    <div id="div_estado">
+                        <label id="label_estado" for="estado">Estado* :</label>
+                        <div id="div_radio_activo">
+                                <input id="inputEstadoActivo" type="radio" name="Estado" class="radio_de_estados">
+                                <label class="estados" for="activo">Activo</label>
+                        </div>
+                        <div id="div_radio_suspendido">
+                                <input id="inputEstadoSuspendido" type="radio" name="Estado" class="radio_de_estados">
+                                <label class="estados" for="Suspendido">Suspendido</label>
+                        </div>
+                        <div id="div_radio_de_baja">
+                                <input id="inputEstadoBaja" type="radio" name="Estado" class="radio_de_estados">
+                                <label class="estados" for="De baja">De baja</label>
+                        </div>
+                    </div>
+
+                    <div id="div_impuesto" class="formulario">
+                        <label id="label_impuesto" for="afecto_impuesto">Afecto a impuesto* :</label>    
+                        <input type="checkbox" id="checkboxImpuesto">
+                    </div>
+                    
+                    <div id="div_descripcion">
+                        <label id="label_descripcion" for="descripcion">Descripcion* :</label>
+                        <textarea id="textareaDescripcion"></textarea>
+                    </div>
+
+                    <div id="div_botones">
+                        <button type="reset" id="botonLimpiar">Limpiar</button>
+                        <button type="submit" id="botonGuardar">Guardar</button>
+                    </div>
+                </form>
+            </fieldset>
+       </fieldset>
+    </aside>
+    <footer> 
+        <a id="que_hacemos" href="https://www.youtube.com/" target="_BLANK">¿Qué hacemos?</a>
+        <a id="enlaces_principales" href="https://www.google.com/" target="_BLANK">Enlaces principales</a>
+        <a id="contactanos" href="https://zoom.idat.edu.pe/" target="_BLANCK">Contáctanos</a>
+    </footer> 
+    <script src="index_02.js"></script> 
+</body>
+</html>
